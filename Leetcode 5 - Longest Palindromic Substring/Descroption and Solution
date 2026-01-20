@@ -1,0 +1,35 @@
+Question
+
+Given a string s, return the longest palindromic substring in s.
+
+ 
+
+Example 1:
+
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+Example 2:
+
+Input: s = "cbbd"
+Output: "bb"
+ 
+
+Constraints:
+
+1 <= s.length <= 1000
+s consist of only digits and English letters.
+
+Solution:
+
+We need to take 2 cases, one for an even palindrome and another for an odd palindrome.
+The concept used is expand from center.
+Run only onw for loop across the string for all characters.
+Initialize l=i for left pointer and r=i for right pointer. (Odd Palindrome)
+Consider that character as center and with a while loop for l>=0 and (r<length of string) and expand around its center.
+Do the same for Even Plaindrome but initialize r=i+1
+
+
+Time Complexity : O(n^2)
+
+Other algorithms : Manacher's Algorithm O(n) and Space O(n)
